@@ -12,8 +12,6 @@ public  class Czytelnik {
         this.liczbaWypozyczen = liczbaWypozyczen;
     }
 
-    //zwiekszLiczbeWypozyczen(), zmniejszLiczbeWypozyczen()
-
     public void wypiszDane(){
         System.out.println("Imie: " + imie);
         System.out.println("Nazwisko: " + nazwisko);
@@ -29,5 +27,4 @@ public  class Czytelnik {
         liczbaWypozyczen--;
         return liczbaWypozyczen;
     }
-
 }
