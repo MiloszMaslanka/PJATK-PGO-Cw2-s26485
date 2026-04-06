@@ -25,4 +25,10 @@ public class Ksiazka {
     public boolean zwroc(){
         return dostepna = true;
     }
+    public boolean isDostepna() {
+        return dostepna;
+    }
+    public String getTytul() {
+        return tytul;
+    }
 }
