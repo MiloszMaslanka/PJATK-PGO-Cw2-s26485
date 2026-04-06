@@ -13,19 +13,31 @@ public class Main {
         biblioteka.dodajKsiazke(ksiazka1);
         biblioteka.dodajKsiazke(ksiazka2);
 
+        System.out.println("=== Dostepne ksiazki na start ===");
         biblioteka.wypiszDostepneKsiazki();
-
         System.out.println("Liczba dostepnych ksiazek: " + biblioteka.policzDostepneKsiazki());
 
-        Ksiazka znaleziona = biblioteka.znajdzKsiazkePoTytule("Inspired");
+        System.out.println("=== Dane czytelnika przed wypozyczeniem ===");
+        czytelnik1.wypiszDane();
 
-        if (znaleziona != null) {
-            System.out.println("Znaleziono ksiazke:");
-            znaleziona.wypiszInfo();
-        } else {
-            System.out.println("Nie znaleziono ksiazki.");
-        }
+        System.out.println("=== Wypozyczenie ksiazki ===");
+        biblioteka.wypozyczKsiazke("Inspired", czytelnik1);
 
+        System.out.println("=== Dostepne ksiazki po wypozyczeniu ===");
+        biblioteka.wypiszDostepneKsiazki();
+        System.out.println("Liczba dostepnych ksiazek: " + biblioteka.policzDostepneKsiazki());
+
+        System.out.println("=== Dane czytelnika po wypozyczeniu ===");
+        czytelnik1.wypiszDane();
+
+        System.out.println("=== Zwrot ksiazki ===");
+        biblioteka.zwrocKsiazke("Inspired", czytelnik1);
+
+        System.out.println("=== Dostepne ksiazki po zwrocie ===");
+        biblioteka.wypiszDostepneKsiazki();
+        System.out.println("Liczba dostepnych ksiazek: " + biblioteka.policzDostepneKsiazki());
+
+        System.out.println("=== Dane czytelnika po zwrocie ===");
         czytelnik1.wypiszDane();
     }
 }

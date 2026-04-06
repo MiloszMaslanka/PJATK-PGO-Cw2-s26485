@@ -19,11 +19,20 @@ public class Ksiazka {
         System.out.println("Dostepna: " + dostepna);
         System.out.println("--------------------");
     }
-    public boolean wypozycz(){
-        return dostepna = false;
+    public boolean wypozycz() {
+        if (dostepna) {
+            dostepna = false;
+            return true;
+        }
+        return false;
     }
-    public boolean zwroc(){
-        return dostepna = true;
+
+    public boolean zwroc() {
+        if (!dostepna) {
+            dostepna = true;
+            return true;
+        }
+        return false;
     }
     public boolean isDostepna() {
         return dostepna;
